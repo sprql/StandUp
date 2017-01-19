@@ -8,55 +8,59 @@
 
 import Cocoa
 
-//WatchrTimerDelegate
-class StatusMenuController: NSObject, NSWindowDelegate {
-    
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
-//    let watchrTimer = WatchrTimer()
+
+class StatusMenuController: NSObject, StandUpTimerDelegate, NSWindowDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var stateMenuItem: NSMenuItem!
     
-//    let timestampFormatter = TimestampFormatter()
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+
+    let timestampFormatter = TimestampFormatter()
     
     let defaultWorkTime = 25*60
     
-//    var coffeeBreakWindow: CoffeeBreakWindow!
-//    var coffeeBreakViewController: CoffeeBreakViewController!
+    var coffeeBreakWindow: CoffeeBreakWindow!
+    var coffeeBreakViewController: CoffeeBreakViewController!
+    
+    let standUpTimer = StandUpTimer()
     
     override func awakeFromNib() {
         statusItem.image = NSImage(named: "statusItemIcon")
         statusItem.menu = statusMenu
         
-        startWorkWatchr()
+        startWorkTimer()
     }
     
-    func startWorkWatchr() {
-//        watchrTimer.stop()
-//        watchrTimer.delegate = self
-//        watchrTimer.start(defaultWorkTime)
-//        watchrUpdated(defaultWorkTime)
+    @IBAction func quitAction(_ sender: Any) {
+        NSApplication.shared().terminate(self)
     }
     
+    func startWorkTimer() {
+        standUpTimer.stop()
+        standUpTimer.delegate = self
+        standUpTimer.start(defaultWorkTime)
+        standUpTimerUpdated(defaultWorkTime)
+    }
     
-    //MARK: WatchrTimerDelegate
-    func watchrAlarm() {
+    func standUpTimerAlarm() {
         let frame = NSScreen.main()!.frame
         
-//        coffeeBreakViewController = CoffeeBreakViewController()
-//        coffeeBreakViewController.view.frame = frame
-//        
-//        coffeeBreakWindow = CoffeeBreakWindow(contentViewController: coffeeBreakViewController)
-//        coffeeBreakWindow.delegate = self
-//        coffeeBreakWindow.setFrame(frame, display: true)
-//        coffeeBreakWindow.makeKeyAndOrderFront(nil)
+        coffeeBreakViewController = CoffeeBreakViewController()
+        coffeeBreakViewController.view.frame = frame
+        
+        coffeeBreakWindow = CoffeeBreakWindow(contentViewController: coffeeBreakViewController)
+        coffeeBreakWindow.delegate = self
+        coffeeBreakWindow.setFrame(frame, display: true)
+        coffeeBreakWindow.makeKeyAndOrderFront(nil)
     }
     
-    func watchrUpdated(_ time: Int) {
-//        stateMenuItem.title = timestampFormatter.timeStringFromTimestamp(time)
+    func standUpTimerUpdated(_ time: Int) {
+        stateMenuItem.title = timestampFormatter.timeStringFromTimestamp(time)
     }
     
     func windowWillClose(_ notification: Notification) {
-        startWorkWatchr()
+        startWorkTimer()
     }
+    
 }

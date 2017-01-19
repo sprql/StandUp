@@ -14,31 +14,25 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="StandUp" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <menu title="StandUp" systemMenu="apple" id="uQy-DD-JDr">
+        <customObject id="1J8-Cp-Faz" customClass="StatusMenuController" customModule="StandUp" customModuleProvider="target">
+            <connections>
+                <outlet property="stateMenuItem" destination="guP-fv-Vlf" id="NTc-VQ-CMi"/>
+                <outlet property="statusMenu" destination="f4U-c5-iGB" id="ivD-3A-BC4"/>
+            </connections>
+        </customObject>
+        <menu id="f4U-c5-iGB">
             <items>
-                <menuItem title="About StandUp" id="5kV-Vb-QxS">
+                <menuItem title="State" id="guP-fv-Vlf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="TbK-CJ-kod"/>
+                <menuItem title="Quit" id="vB0-8f-Dvw">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                <menuItem title="State" id="TMF-Zn-h9P" userLabel="State">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="tjo-Wq-8pH"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="GhG-bD-JX8"/>
-                <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
-                <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                <menuItem title="Quit StandUp" keyEquivalent="q" id="4sb-4s-VLi">
-                    <connections>
-                        <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                        <action selector="quitAction:" target="1J8-Cp-Faz" id="gwC-7b-jE1"/>
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="139" y="165.5"/>
         </menu>
     </objects>
 </document>

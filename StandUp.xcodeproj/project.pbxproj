@@ -10,6 +10,12 @@
 		11115F9C1E2EAA680006C23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11115F9B1E2EAA680006C23F /* AppDelegate.swift */; };
 		11115F9E1E2EAA680006C23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11115F9D1E2EAA680006C23F /* Assets.xcassets */; };
 		11115FA11E2EAA680006C23F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11115F9F1E2EAA680006C23F /* MainMenu.xib */; };
+		1189D4A61E30083F00388FF1 /* CoffeeBreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D4A01E30083F00388FF1 /* CoffeeBreakViewController.swift */; };
+		1189D4A71E30084000388FF1 /* CoffeeBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1189D4A11E30083F00388FF1 /* CoffeeBreakViewController.xib */; };
+		1189D4A81E30084000388FF1 /* CoffeeBreakWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D4A21E30083F00388FF1 /* CoffeeBreakWindow.swift */; };
+		1189D4A91E30084000388FF1 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D4A31E30083F00388FF1 /* StatusMenuController.swift */; };
+		1189D4AA1E30084000388FF1 /* TimestampFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D4A41E30083F00388FF1 /* TimestampFormatter.swift */; };
+		1189D4AB1E30084000388FF1 /* StandUpTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D4A51E30083F00388FF1 /* StandUpTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +24,12 @@
 		11115F9D1E2EAA680006C23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11115FA01E2EAA680006C23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		11115FA21E2EAA680006C23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1189D4A01E30083F00388FF1 /* CoffeeBreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBreakViewController.swift; sourceTree = "<group>"; };
+		1189D4A11E30083F00388FF1 /* CoffeeBreakViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoffeeBreakViewController.xib; sourceTree = "<group>"; };
+		1189D4A21E30083F00388FF1 /* CoffeeBreakWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBreakWindow.swift; sourceTree = "<group>"; };
+		1189D4A31E30083F00388FF1 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		1189D4A41E30083F00388FF1 /* TimestampFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimestampFormatter.swift; sourceTree = "<group>"; };
+		1189D4A51E30083F00388FF1 /* StandUpTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandUpTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				11115F9B1E2EAA680006C23F /* AppDelegate.swift */,
+				1189D4A01E30083F00388FF1 /* CoffeeBreakViewController.swift */,
+				1189D4A21E30083F00388FF1 /* CoffeeBreakWindow.swift */,
+				1189D4A51E30083F00388FF1 /* StandUpTimer.swift */,
+				1189D4A31E30083F00388FF1 /* StatusMenuController.swift */,
+				1189D4A41E30083F00388FF1 /* TimestampFormatter.swift */,
 				11115F9D1E2EAA680006C23F /* Assets.xcassets */,
 				11115F9F1E2EAA680006C23F /* MainMenu.xib */,
+				1189D4A11E30083F00388FF1 /* CoffeeBreakViewController.xib */,
 				11115FA21E2EAA680006C23F /* Info.plist */,
 			);
 			path = StandUp;
@@ -117,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1189D4A71E30084000388FF1 /* CoffeeBreakViewController.xib in Resources */,
 				11115F9E1E2EAA680006C23F /* Assets.xcassets in Resources */,
 				11115FA11E2EAA680006C23F /* MainMenu.xib in Resources */,
 			);
@@ -129,7 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1189D4AB1E30084000388FF1 /* StandUpTimer.swift in Sources */,
+				1189D4A81E30084000388FF1 /* CoffeeBreakWindow.swift in Sources */,
+				1189D4A61E30083F00388FF1 /* CoffeeBreakViewController.swift in Sources */,
+				1189D4A91E30084000388FF1 /* StatusMenuController.swift in Sources */,
 				11115F9C1E2EAA680006C23F /* AppDelegate.swift in Sources */,
+				1189D4AA1E30084000388FF1 /* TimestampFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

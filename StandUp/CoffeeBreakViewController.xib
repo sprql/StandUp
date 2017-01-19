@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CoffeeBreakViewController" customModule="StandUp" customModuleProvider="target">
+            <connections>
+                <outlet property="breakImageView" destination="lOc-RM-h1c" id="aY4-Tb-uyx"/>
+                <outlet property="closeButton" destination="aMB-R1-Ch1" id="Isc-mG-exT"/>
+                <outlet property="hintTextField" destination="eht-UI-YTq" id="MGj-Tb-eds"/>
+                <outlet property="timerField" destination="qzy-bP-avM" id="sBB-vF-Ra9"/>
+                <outlet property="view" destination="jnM-6Q-hrd" id="rXs-gZ-Tcf"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="jnM-6Q-hrd">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qzy-bP-avM">
+                    <rect key="frame" x="181" y="220" width="139" height="60"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="25:00" id="u3c-FV-ynu">
+                        <font key="font" metaFont="systemLight" size="50"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-RM-h1c">
+                    <rect key="frame" x="186" y="288" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="Oru-vk-qX7"/>
+                        <constraint firstAttribute="width" constant="128" id="Rp1-UP-t3O"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cup" id="SzU-d0-fQ9"/>
+                </imageView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-R1-Ch1">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="dzh-Zb-uLf">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="systemUltraLight" size="20"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quitAction:" target="-2" id="cQZ-ge-7uf"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eht-UI-YTq">
+                    <rect key="frame" x="-2" y="0.0" width="504" height="212"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="212" id="FXm-Jc-z8Q"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Keep Calm" id="UgW-Ax-xDZ">
+                        <font key="font" metaFont="systemMedium" size="30"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="eht-UI-YTq" firstAttribute="leading" secondItem="jnM-6Q-hrd" secondAttribute="leading" id="7sj-ot-kzA"/>
+                <constraint firstItem="qzy-bP-avM" firstAttribute="centerY" secondItem="jnM-6Q-hrd" secondAttribute="centerY" id="8b4-ah-G5s"/>
+                <constraint firstItem="lOc-RM-h1c" firstAttribute="centerX" secondItem="qzy-bP-avM" secondAttribute="centerX" id="BFe-rc-pgH"/>
+                <constraint firstItem="lOc-RM-h1c" firstAttribute="centerX" secondItem="jnM-6Q-hrd" secondAttribute="centerX" id="em8-7t-RaB"/>
+                <constraint firstAttribute="trailing" secondItem="eht-UI-YTq" secondAttribute="trailing" id="gWZ-Ua-ftl"/>
+                <constraint firstItem="eht-UI-YTq" firstAttribute="top" secondItem="qzy-bP-avM" secondAttribute="bottom" constant="8" id="tIq-xJ-g2S"/>
+                <constraint firstItem="qzy-bP-avM" firstAttribute="top" secondItem="lOc-RM-h1c" secondAttribute="bottom" constant="8" symbolic="YES" id="vlN-yS-5ZV"/>
+            </constraints>
+            <point key="canvasLocation" x="368" y="624"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cup" width="512" height="512"/>
+    </resources>
+</document>
