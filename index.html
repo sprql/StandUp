@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>StandUp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+        <style>
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card {
+    background: #f0f0f0;
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 20rem;
+    color: #555;
+}
+
+.card h1,
+.card h2,
+.card h3 {
+    color: #333;
+    font-weight: 500;
+}
+
+.card .logo {
+    width: 50%;
+}
+
+.card hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    margin: 1rem -2rem;
+}
+
+.card .btn {
+    -webkit-appearance: none;
+    border: .1rem solid #ccc;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.6rem;
+    outline: 0;
+    padding: .7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background: #dc3033;
+    color: #fff;
+}
+
+.card section {
+    text-align: left;
+}
+        </style>
+    </head>
+    <body>
+        <main class="container" aria-label="Content">
+            <div class="card">
+                <img class="logo" src="https://raw.githubusercontent.com/sprql/StandUp/master/StandUp/Assets.xcassets/AppIcon.appiconset/stand-up.png" />
+                <h1>StandUp</h1>
+                <p>Timer app that limits the time of continuous sitting at the computer</p>
+                <p>
+                    <a href="https://github.com/sprql/StandUp/releases/download/0.0.1/StandUp.app.tar.gz" class="btn">Download</a>
+                </p>
+                <p>v.0.0.1</p>
+                <hr />
+                <h3>Features</h2>
+                <ul>
+                    <li>Auto switch between work mode & rest mode</li>
+                </ul>
+                <hr />
+                <p>
+                    <a href="https://github.com/sprql/StandUp">github.com/sprql/StandUp</a>
+                </p>
+            </div>
+        </main>
+    </body>
+</html>
