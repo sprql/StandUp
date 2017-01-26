@@ -22,7 +22,6 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
     let timestampFormatter = TimestampFormatter()
     
     @IBOutlet weak var timerField: NSTextField!
-    @IBOutlet weak var closeButton: NSButton!
     @IBOutlet weak var breakImageView: NSImageView!
     @IBOutlet weak var hintTextField: NSTextField!
     
@@ -38,6 +37,10 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
         initBreakState()
     }
     
+    override func mouseDown(with event: NSEvent) {
+        quitAction(self)
+    }
+    
     @IBAction func quitAction(_ sender: AnyObject) {
         if (currentState == WorkState) {
             self.view.window?.close()
@@ -46,7 +49,6 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
     
     func initBreakState() {
         currentState = CoffeeBreakState
-        closeButton.isHidden = true
         timerField.isHidden = false
         breakImageView.image = NSImage(named: "cup")
         hintTextField.stringValue = startCoffeBreakHint
@@ -54,7 +56,6 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
     
     func initWorkState() {
         currentState = WorkState
-        closeButton.isHidden = false
         timerField.isHidden = true
         breakImageView.image = NSImage(named: "crown")
         hintTextField.stringValue = startWorkHint

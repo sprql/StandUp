@@ -10,7 +10,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="CoffeeBreakViewController" customModule="StandUp" customModuleProvider="target">
             <connections>
                 <outlet property="breakImageView" destination="lOc-RM-h1c" id="aY4-Tb-uyx"/>
-                <outlet property="closeButton" destination="aMB-R1-Ch1" id="Isc-mG-exT"/>
                 <outlet property="hintTextField" destination="eht-UI-YTq" id="MGj-Tb-eds"/>
                 <outlet property="timerField" destination="qzy-bP-avM" id="sBB-vF-Ra9"/>
                 <outlet property="view" destination="jnM-6Q-hrd" id="rXs-gZ-Tcf"/>
@@ -38,17 +37,6 @@
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cup" id="SzU-d0-fQ9"/>
                 </imageView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-R1-Ch1">
-                    <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="dzh-Zb-uLf">
-                        <behavior key="behavior" lightByContents="YES"/>
-                        <font key="font" metaFont="systemUltraLight" size="20"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="quitAction:" target="-2" id="cQZ-ge-7uf"/>
-                    </connections>
-                </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eht-UI-YTq">
                     <rect key="frame" x="-2" y="0.0" width="504" height="212"/>
                     <constraints>
