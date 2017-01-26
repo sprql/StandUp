@@ -9,8 +9,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CoffeeBreakViewController" customModule="StandUp" customModuleProvider="target">
             <connections>
-                <outlet property="breakImageView" destination="lOc-RM-h1c" id="aY4-Tb-uyx"/>
                 <outlet property="hintTextField" destination="eht-UI-YTq" id="MGj-Tb-eds"/>
+                <outlet property="imageView" destination="lOc-RM-h1c" id="aGz-yu-hEo"/>
                 <outlet property="timerField" destination="qzy-bP-avM" id="sBB-vF-Ra9"/>
                 <outlet property="view" destination="jnM-6Q-hrd" id="rXs-gZ-Tcf"/>
             </connections>

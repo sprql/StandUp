@@ -22,7 +22,7 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
     let timestampFormatter = TimestampFormatter()
     
     @IBOutlet weak var timerField: NSTextField!
-    @IBOutlet weak var breakImageView: NSImageView!
+    @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var hintTextField: NSTextField!
     
     override func viewDidLoad() {
@@ -50,14 +50,14 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
     func initBreakState() {
         currentState = CoffeeBreakState
         timerField.isHidden = false
-        breakImageView.image = NSImage(named: "cup")
+        imageView.image = NSImage(named: "cup")
         hintTextField.stringValue = startCoffeBreakHint
     }
     
     func initWorkState() {
         currentState = WorkState
         timerField.isHidden = true
-        breakImageView.image = NSImage(named: "crown")
+        imageView.image = NSImage(named: "crown")
         hintTextField.stringValue = startWorkHint
     }
     
