@@ -8,7 +8,12 @@
 
 import Cocoa
 
-class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
+protocol CoffeBreakActions {
+    func quitAction()
+}
+
+
+class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate, CoffeBreakActions {
     let CoffeeBreakState = 1
     let WorkState = 2
 
@@ -38,10 +43,10 @@ class CoffeeBreakViewController : NSViewController, StandUpTimerDelegate {
     }
     
     override func mouseDown(with event: NSEvent) {
-        quitAction(self)
+        quitAction()
     }
     
-    @IBAction func quitAction(_ sender: AnyObject) {
+    func quitAction() {
         if (currentState == WorkState) {
             self.view.window?.close()
         }

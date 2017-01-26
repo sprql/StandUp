@@ -30,7 +30,7 @@ class CoffeeBreakWindow : NSWindow {
     
     override func keyDown(with theEvent: NSEvent) {
         if (theEvent.keyCode == 53) {
-            (self.contentViewController as! CoffeeBreakViewController).quitAction(self)
+            (self.contentViewController as! CoffeBreakActions).quitAction()
         }
     }
 }
