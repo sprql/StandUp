@@ -6,44 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>StandUp</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
         <style>
+html, body, .container { height:  100%; }
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    font-family: Arsenal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
 }
 
 .card {
-    background: #f0f0f0;
-    border-radius: .5rem;
-    padding: 2rem;
+    margin: auto;
     text-align: center;
-    width: 20rem;
-    color: #555;
+    max-width: 30rem;
 }
 
 .card h1,
 .card h2,
 .card h3 {
     color: #333;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .card .logo {
-    width: 50%;
+    max-width: 10rem;
 }
 
 .card hr {
     border: 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #fff;
-    margin: 1rem -2rem;
+    border-top: 1px solid #f0f0f0;
+    margin: 1rem 0;
 }
 
 .card .btn {
     -webkit-appearance: none;
-    border: .1rem solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     border-radius: .3rem;
     cursor: pointer;
     display: inline-block;
@@ -52,9 +52,6 @@
     padding: .7rem 1rem;
     text-align: center;
     text-decoration: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
@@ -62,9 +59,9 @@
     color: #fff;
 }
 
-.card section {
-    text-align: left;
-}
+.description { text-align: justify; }
+
+ul { list-style: none; }
         </style>
     </head>
     <body>
@@ -72,20 +69,20 @@
             <div class="card">
                 <img class="logo" src="https://raw.githubusercontent.com/sprql/StandUp/master/StandUp/Assets.xcassets/AppIcon.appiconset/stand-up.png" />
                 <h1>StandUp</h1>
-                <p>Timer app that limits the time of continuous sitting at the computer</p>
+                <h3>Timer app that limits the time of continuous sitting at the computer</h3>
                 <p>
-                    <a href="https://github.com/sprql/StandUp/releases/download/0.0.1/StandUp.app.tar.gz" class="btn">Download</a>
+                    <a href="https://github.com/sprql/StandUp/releases/download/v0.0.2/StandUp.app.tar.gz" class="btn">Download</a>
                 </p>
-                <p>v.0.0.1</p>
+                <p>v.0.0.2</p>
                 <hr />
-                <h3>Features</h2>
-                <ul>
-                    <li>Auto switch between work mode & rest mode</li>
-                </ul>
+                <p class="description">
+                After launching StandUp goes into “work” mode for 25 minutes, then the work time is out the app go to “break” mode. The screen is blocked by a translucent window with countdown for 5 minute, wherein the keyboard and the mouse active, which allows you to complete tasks if necessary. Continue to work in this mode is not comfortable, what motivates you to stand up from the computer. After 5 minutes you can continue working and the program will automatically begin a new “work” countdown.
+                </p>
                 <hr />
                 <p>
                     <a href="https://github.com/sprql/StandUp">github.com/sprql/StandUp</a>
                 </p>
+                © 2017 sprql
             </div>
         </main>
     </body>
